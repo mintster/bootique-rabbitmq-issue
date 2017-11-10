@@ -36,7 +36,7 @@ public class RabbitMqUI implements IRabbitMqUI {
     public void init() throws IOException, TimeoutException {
         Connection connection = connectionFactory.forName(CONNECTION_NAME);
         // RabbitMQ Exchange with "bqQueue" must exist or IOException is thrown
-        Channel channel = channelFactory.openChannel(connection, EXCHANGE_NAME, QUEUE_NAME, "hello");
+        Channel channel = channelFactory.openChannel(connection, EXCHANGE_NAME, QUEUE_NAME, "");
         String message = "Hello World!";
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes("UTF-8"));
         System.out.println(" [x] Sent '" + message + "'");
