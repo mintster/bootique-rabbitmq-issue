@@ -1,6 +1,6 @@
 ## Bootique RabbitMQ ChannelFactory Issue 
 
-A RabbitMQ Exchange with the same name of the Queue must exist to avoid throwing an exception with `channelFactory.openChannel()`.
+**ISSUE:** A RabbitMQ Exchange with the same name of the Queue must exist to avoid throwing an exception with `channelFactory.openChannel()`.
 
 [LINK TO ISSUE](https://github.com/bootique/bootique-rabbitmq-client/issues/1)
 
